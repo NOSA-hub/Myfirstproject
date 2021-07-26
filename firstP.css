@@ -27,34 +27,52 @@ body{
 /*===================Main====================*/
 #main{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 35px;
     height: 400px;
     background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(logo.jpg);
     background-repeat: no-repeat;
     }
     .van {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         text-align: left;
         font-size: 150%;
         font-weight:600;
         color: white;
         margin-top: auto;
         margin-bottom: auto;
+     
     }
-    .van .para1{
+     .para1{
         text-align: left;
-    }
-    .para1{
+        
+        font-size: 60%;
+         color: white;
+     }
+    .para11{
         text-align: center;
         font-size: 60%;
          color: white;
+         padding-left: 15px;
+         padding-right: 15px;
         
     }
     #form{
+       
         margin-top: auto;
         margin-bottom: auto;
         background-color:rgba(20, 20, 20, 0.6);
         transform: scale(1.5);   
+       
+        
+    }
+    form{
+
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
     }
     .para2{
         text-align: center;
@@ -64,27 +82,22 @@ body{
          margin-left: 10px;
         
     }
-    input{
-        border: 0px;
-    }
+    
    
     
     .name{
-        width: 210px;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+      
+     
+       
         border-radius: 3px;
         padding: 5px;
         outline: none;
        
     }
     .submit{
-        width: 225px;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-top: 5px;
+       
+        
+       
         margin-bottom: 15px;
         padding-left: 10px;
         padding-right: 10px;
@@ -178,15 +191,10 @@ body{
         font-weight: 500px;
         text-align: center;
 }
-.stard{
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 30px;
-}
-    
+
 .star{
     color: gold;
-    text-align: left;
+    text-align: center;
     font-size: large;
 }
 .line{
@@ -204,70 +212,417 @@ body{
     padding-left: 320px;
 }
 /*===================Responsiveness====================*/
-@media (max-width:600px) {
-   body{
-       height:100%;
-   }
-   
+/*===================Media queries for 800px====================*/
+
+@media (max-width:800px) {
+ 
     #main{
         display: flex;
         justify-content: space-evenly;
-        padding: 10px;
-        height: 200px;
-        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(logo.jpg);
-        background-size: cover;
-        }
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        height: fit-content;
+    }
     .van {
-        text-align: left;
-        font-size: 100%;
-        font-weight:600;
-        color: white;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-    .van .para1{
-        text-align: left;
-    }
-    .para1{
-        text-align: center;
-        font-size: 50%;
-         color: white;
-        
-    }
-   
-    #form{
-        margin-top: auto;
-        margin-bottom: auto;
-        background-color:rgba(20, 20, 20, 0.6);
-        transform: scale(0.8);   
-    }
-    #main2 {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+                   
+          }
+    .vann {
+        text-align: left;
+        font-size: 120%;
+        font-weight:600;
+        
+      
 
     }
-    .submain img{
-        margin-left: 40px;
-        border-radius: 50%;
-        height: 50px;
-        width:50px;
+   .van .para1{
        
-    }
-    .para21{
         font-size: 60%;
-        color: black;
+        line-height: 1.5;
+        color: white;
+        padding-left: 0px;
         font-weight: 400px;
-        text-align: center;
     }
-    .para22{
-        font-size: 50%;
-        color: black;
-     
+    #form{
+       
+        margin: 10px;
         text-align: center;
+        transform: scale(1.0);   
     }
+    #form .para1{
+        text-align: center; 
+    }
+    .para2{
+        text-align: center;
+        font-size: 120%;
+        font-weight: bold;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         font-weight:600;
+         margin-left: 5px;
+    }
+    .para11{
+        font-size: 90%;
+    }
+    form{
 
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        }
+    
+        
+    .name{
+           
+        font-size: 110%;
+    }
+    .submit{
+        
+        font-size: 110%;
+       padding-left: 5px;
+       font-weight: 600px;
+    }
+ /*===================Main 2====================*/
+ #main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: fit-content;
+ }
+ .submain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+.submain img{
+    height: 80px;
+    width:80px;
+    margin-left: 0px;
+   
+}
+.para21{
+    font-size: 100%;
+    color: black;
+    font-weight: 400px;
+    text-align: center;
+}
+.para22{
+    font-size: 80%;
+    color: black;
+    text-align: center;
+}
+/*===================Feedback====================*/
+#feedback{
+        
+    padding: 40px;
+    background-color: antiquewhite;
+}
+.head{
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 150%;
+    text-align: center;
+  
+}
+#flexbox{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    
+
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.content img{
+    margin-left: 0px;
+    border-width: 50px;
+    border-color: white;
+    border-radius: 50%;
+    height: 90px;
+    width:90px;
+   
+}
+.content .para21{
+
+    font-size: 90%;
+    color: black;
+    font-weight: lighter;
+    text-align: center;
+    
+}
+.para23{
+font-size: 80%;
+
+color: black;
+font-weight: lighter;
+text-align: center;
+}
+.content .para22{
+    font-size: 100%;
+    color: black;
+    font-style: italic;
+    font-weight: 500px;
+    text-align: center;
+}
+.line{
+    background-color: rgb(156, 145, 145);
+    width:100%;
+
+}
+
+.star{
+color: gold;
+text-align: center;
+font-size: large;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.line{
+background-color: rgb(156, 145, 145);
+height:2px;
+
+}
+#footer{
+
+font-size: 80%;
+text-align: center;
+padding: 6px;
+
+
+
+}
+}
+
+
+/*===================Media queries for 400px====================*/
+@media (max-width:450px) {
+ 
+    .pro {
+        text-align: center;
+        font-size: 70%;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .Phone {
+        text-align: center;
+        font-size: 60%;
+        font-weight: bold;
+        margin: 10px;
+    }
+    #main{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: fit-content;
+    }
+    .van {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+                   
+          }
+    .vann {
+        text-align: left;
+        font-size: 80%;
+        font-weight:600;
+        
+      
+
+    }
+   .van .para1{
+       
+        font-size: 50%;
+        line-height: 1.5;
+        color: white;
+        padding-left: 0px;
+        line-height: 1.5;
+    }
+    #form{
+       
+        margin: 10px;
+        text-align: center;
+        transform: scale(0.7);   
+    }
+    #form .para1{
+        text-align: center; 
+    }
+    .para2{
+        text-align: center;
+        font-size: 80%;
+         font-weight:400;
+         margin-left: 5px;
+    }
+    .para11{
+        font-size: 70%;
+    }
+    form{
+
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        }
+    
+        
+    .name{
+           
+        font-size: 80%;
+    }
+    .submit{
+        
+        font-size: 90%;
+       padding-left: 0px;
+       font-weight: lighter;
+    }
+ /*===================Main 2====================*/
+ #main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: fit-content;
+ }
+ .submain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+.submain img{
+    height: 50px;
+    width:50px;
+    margin-left: 0px;
+   
+}
+.para21{
+    font-size: 80%;
+    color: black;
+    font-weight: 400px;
+    text-align: center;
+}
+.para22{
+    font-size: 70%;
+    color: black;
+    text-align: center;
+}
+/*===================Feedback====================*/
+#feedback{
+        
+    padding: 40px;
+    background-color: antiquewhite;
+}
+.head{
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    text-align: center;
+  
+}
+#flexbox{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    
+
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.content img{
+    margin-left: 0px;
+    border-width: 50px;
+    border-color: white;
+    border-radius: 50%;
+    height: 60px;
+    width:60px;
+   
+}
+.content .para21{
+
+    font-size: 60%;
+    color: black;
+    font-weight: lighter;
+    text-align: center;
+    
+}
+.para23{
+font-size: 50%;
+
+color: black;
+font-weight: lighter;
+text-align: center;
+}
+.content .para22{
+    font-size: 70%;
+    color: black;
+    font-style: italic;
+    font-weight: 500px;
+    text-align: center;
+}
+.line{
+    background-color: rgb(156, 145, 145);
+    width:100%;
+
+}
+
+.star{
+color: gold;
+text-align: center;
+font-size: large;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.line{
+background-color: rgb(156, 145, 145);
+height:2px;
+
+}
+#footer{
+
+font-size: 50%;
+text-align: center;
+padding: 6px;
+
+
+
+}
+}
+   
+   
+   
+   
+   
+   
+
+
+
+
+
+
+
+
+   /* 
+   
 
 .content img{
     margin-left: 75px;
