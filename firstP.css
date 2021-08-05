@@ -2,6 +2,7 @@
 body{
     font-size: 14px;
     font-family:Arial, Helvetica, sans-serif;
+    height:100vh;
 }
 
 #header{
@@ -31,7 +32,7 @@ body{
     padding: 35px;
     height: 400px;
     background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(logo.jpg);
-    background-repeat: no-repeat;
+    background-size: 100% 100%;
     }
     .van {
         display: flex;
@@ -191,11 +192,18 @@ body{
         font-weight: 500px;
         text-align: center;
 }
-
-.star{
+.star-section{
+    display: flex;
+    justify-content: space-evenly;
+}
+.star, .hidden-star{
     color: gold;
     text-align: center;
     font-size: large;
+    margin-left: 10px;
+}
+.hidden-star{
+    display: none;
 }
 .line{
     background-color: rgb(156, 145, 145);
@@ -212,9 +220,12 @@ body{
     padding-left: 320px;
 }
 /*===================Responsiveness====================*/
-/*===================Media queries for 800px====================*/
+/*===================Media queries for 850px====================*/
 
-@media (max-width:850px) {
+@media only screen and (max-width:850px) {
+    body{
+       max-width: 850px;
+    }
  
     #main{
         display: flex;
@@ -223,7 +234,7 @@ body{
         align-items: center;
         padding: 30px;
         height: fit-content;
-        background-size: cover;
+        
     }
     .van {
         display: flex;
@@ -383,12 +394,15 @@ text-align: center;
 
 }
 
-.star{
+.star, .hidden-star{
 color: gold;
 text-align: center;
 font-size: large;
 margin-top: 0px;
 margin-bottom: 10px;
+}
+.hidden-star{
+    display: none;
 }
 .line{
 background-color: rgb(156, 145, 145);
@@ -401,14 +415,21 @@ font-size: 80%;
 text-align: center;
 padding: 6px;
 
-
-
+}
+.hidden-star{
+    display: block;
+}
+.star-section{
+    display: none;
 }
 }
 
 
 /*===================Media queries for 400px====================*/
-@media (max-width:450px) {
+@media only screen and (max-width:450px) {
+    body{
+        max-width: 850px;
+     }
  
     .pro {
         text-align: center;
@@ -423,14 +444,11 @@ padding: 6px;
         margin: 10px;
     }
     #main{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
+      
         align-items: center;
         padding: 10px;
-        height: fit-content;
-        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(logo.jpg);
-        background-size: cover;
+        
+        
     }
     .van {
         display: flex;
@@ -624,58 +642,6 @@ padding: 6px;
 
 
 
-   /* 
+ 
    
 
-.content img{
-    margin-left: 75px;
-    border-width: 50px;
-    border-color: white;
-    border-radius: 50%;
-    height: 40px;
-    width:40px;
-   
-}
-.para23{
-    font-size: 30%;
-    
-    color: black;
-    font-weight: lighter;
-    text-align: center;
-}
-.content .para22{
-        font-size: 70%;
-        color: black;
-        font-style: italic;
-        font-weight: 500px;
-        text-align: center;
-}
-.content .para21{
-
-    font-size: 30%;
-    color: black;
-    font-weight: lighter;
-    text-align: center;
-    
-}
-.star{
-    color: gold;
-    text-align: center;
-    font-size: 70%;
-}
-#footer{
-    
-    background-color: black;
-    color: white;
-    font-size: 60%;
-     padding: 10px;
-    
-}
-.head{
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 100%;
-    text-align: center;
-  
-}
-}
